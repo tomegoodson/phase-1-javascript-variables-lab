@@ -1,8 +1,10 @@
 require ( './helpers.js' );
 
+const companyName = 'Scuber';
+let mostProfitableNeighborhood = 'Chelsea';
+let companyCeo = 'Susan Smith';
 const fs = require('fs')
 const path = require('path')
-
 const js = fs.readFileSync(path.resolve(__dirname, '..', 'index.js'), 'utf-8')
 
 describe('index.js', function () {
@@ -14,8 +16,7 @@ describe('index.js', function () {
     it('is defined as a const', function () {
       expect(js).to.match(/const companyName/, "Expected companyName to be a const");
     });
-  });
-
+  })
   describe('mostProfitableNeighborhood', function () {
     it('is declared as equal to Chelsea', function () {
       expect(mostProfitableNeighborhood).to.equal('Chelsea');
@@ -36,3 +37,4 @@ describe('index.js', function () {
     });
   });
 });
+
